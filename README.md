@@ -41,10 +41,10 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_nodejs15</td>
+              <td>linux_64_nodejs16</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=12475&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/prettier-feedstock?branchName=master&jobName=linux&configuration=linux_64_nodejs15" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/prettier-feedstock?branchName=master&jobName=linux&configuration=linux_64_nodejs16" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -62,10 +62,10 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_nodejs15</td>
+              <td>osx_64_nodejs16</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=12475&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/prettier-feedstock?branchName=master&jobName=osx&configuration=osx_64_nodejs15" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/prettier-feedstock?branchName=master&jobName=osx&configuration=osx_64_nodejs16" alt="variant">
                 </a>
               </td>
             </tr>
