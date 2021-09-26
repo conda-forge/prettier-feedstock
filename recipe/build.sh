@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-echo "$target_platform"
-if [ "$target_platform" == "osx-arm64" ]; then
-    export npm_config_arch="x64"
+set -euxo pipefail
+if [[ "${target_platform}" == "osx-arm64" ]]; then
+    export npm_config_arch="arm64"
 fi
 
 rm $PREFIX/bin/node
