@@ -10,12 +10,13 @@ source:
   sha256: 56d16af6b95bed8fc984d511e08f1c7dccc6676296b78f7b123719f21f5dcfbf
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
 
 requirements:
   build:
     - sysroot_linux-64 2.17  # [linux64]
+    - nodejs
   host:
     - nodejs
     - yarn
