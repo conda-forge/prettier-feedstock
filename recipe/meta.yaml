@@ -25,7 +25,7 @@ requirements:
 test:
   commands:
     - prettier --version | grep "{{ version }}"  # [not win]
-    - prettier --version | findstr "{{ version }}" # [win]
+    - prettier --version | findstr "{{ version }}"  # [win]
 
 about:
   home: https://github.com/prettier/prettier
