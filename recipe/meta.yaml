@@ -33,6 +33,7 @@ about:
   license_family: MIT
   license_file:
     - LICENSE
+    - ThirdPartyLicenses.txt
   summary: Prettier is an opinionated code formatter.
 
 extra:
