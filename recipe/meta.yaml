@@ -10,8 +10,7 @@ source:
   sha256: 56d16af6b95bed8fc984d511e08f1c7dccc6676296b78f7b123719f21f5dcfbf
 
 build:
-  number: 1
-  skip: true  # [win]
+  number: 2
 
 requirements:
   build:
@@ -25,7 +24,8 @@ requirements:
 
 test:
   commands:
-    - prettier --version | grep "{{ version }}"
+    - prettier --version | grep "{{ version }}"  # [not win]
+    - prettier --version | findstr "{{ version }}"  # [win]
 
 about:
   home: https://github.com/prettier/prettier
@@ -33,6 +33,7 @@ about:
   license_family: MIT
   license_file:
     - LICENSE
+    - ThirdPartyLicenses.txt
   summary: Prettier is an opinionated code formatter.
 
 extra:
