@@ -1,11 +1,9 @@
-del %PREFIX%\node.exe || goto :error
-mklink %PREFIX%\node.exe %BUILD_PREFIX%\node.exe || goto :error
+call npm config set prefix %BUILD_PREFIX% || goto :error
 
-yarn pack || goto :error
-yarn licenses generate-disclaimer > ThirdPartyLicenses.txt || goto :error
-NPM_CONFIG_USERCONFIG=/tmp/nonexistentrc || goto :error
+call yarn pack || goto :error
+call yarn licenses generate-disclaimer > ThirdPartyLicenses.txt || goto :error
 
-npm install -g %PKG_NAME%-v%PKG_VERSION%.tgz || goto :error
+call npm install --userconfig nonexistentrc --global --logLevel verbose %PKG_NAME%-v%PKG_VERSION%.tgz || goto :error
 
 :error
 echo Failed with error #%errorlevel%.
