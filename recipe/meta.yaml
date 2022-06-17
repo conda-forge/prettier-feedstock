@@ -15,7 +15,7 @@ build:
 requirements:
   build:
     - sysroot_linux-64 2.17  # [linux64]
-    - nodejs
+    - nodejs  # [not win]
   host:
     - nodejs
     - yarn
