@@ -233,4 +233,5 @@ Feedstock Maintainers
 =====================
 
 * [@janjagusch](https://github.com/janjagusch/)
+* [@xhochy](https://github.com/xhochy/)
 

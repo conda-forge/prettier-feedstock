@@ -10,12 +10,12 @@ source:
   sha256: 2bd4695de359d7488d51329ddb24e6db776c232e1b0b35c5f180094b92e091de
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
     - sysroot_linux-64 2.17  # [linux64]
-    - nodejs
+    - nodejs  # [not win]
   host:
     - nodejs
     - yarn
@@ -26,6 +26,7 @@ test:
   commands:
     - prettier --version | grep "{{ version }}"  # [not win]
     - prettier --version | findstr "{{ version }}"  # [win]
+    - where prettier  # [win]
 
 about:
   home: https://github.com/prettier/prettier
@@ -39,3 +40,4 @@ about:
 extra:
   recipe-maintainers:
     - janjagusch
+    - xhochy
