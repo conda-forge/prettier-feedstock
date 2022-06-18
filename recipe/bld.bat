@@ -11,11 +11,6 @@ md node_modules
 cmd /c "npm install prettier@%PKG_VERSION%"
 if errorlevel 1 exit 1
 
-dir node_modules
-dir node_modules\.bin
-dir node_modules\prettier
-dir node_modules\prettier\bin
-
 pushd %LIBRARY_PREFIX%\bin
 for %%c in (prettier) do (
   echo @echo on >> %%c.bat
