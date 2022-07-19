@@ -14,5 +14,5 @@ if errorlevel 1 exit 1
 pushd %LIBRARY_PREFIX%\bin
 for %%c in (prettier) do (
   echo @echo on >> %%c.bat
-  echo %LIBRARY_PREFIX%\share\prettier\node_modules\.bin\%%c.cmd "%%*" >> %%c.bat
+  echo %LIBRARY_PREFIX%\share\prettier\node_modules\.bin\%%c.cmd %%* >> %%c.bat
 )
