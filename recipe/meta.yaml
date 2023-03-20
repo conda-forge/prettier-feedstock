@@ -18,7 +18,7 @@ requirements:
     - nodejs  # [not win]
   host:
     - nodejs
-    - yarn
+    - yarn <2
   run:
     - nodejs
 
