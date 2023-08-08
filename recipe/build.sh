@@ -8,8 +8,9 @@ fi
 rm $PREFIX/bin/node
 ln -s $BUILD_PREFIX/bin/node $PREFIX/bin/node
 
-yarn pack
-yarn licenses generate-disclaimer > ThirdPartyLicenses.txt
-NPM_CONFIG_USERCONFIG=/tmp/nonexistentrc
+pnpm install
+pnpm licenses list --json | pnpm-licenses generate-disclaimer --json-input > ThirdPartyLicenses.txt
 
-npm install -g ${PKG_NAME}-v${PKG_VERSION}.tgz
+pnpm pack
+NPM_CONFIG_USERCONFIG=/tmp/nonexistentrc
+npm install -g ${PKG_NAME}-${PKG_VERSION}.tgz

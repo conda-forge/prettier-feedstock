@@ -14,11 +14,11 @@ build:
 
 requirements:
   build:
-    - sysroot_linux-64 2.17  # [linux64]
     - nodejs  # [not win]
   host:
     - nodejs
-    - yarn <2
+    - pnpm
+    - pnpm-licenses
   run:
     - nodejs
 
