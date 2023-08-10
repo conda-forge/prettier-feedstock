@@ -27,13 +27,6 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_64_nodejs14</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=12475&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/prettier-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_nodejs14" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
               <td>linux_64_nodejs16</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=12475&branchName=main">
@@ -48,10 +41,17 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_nodejs14</td>
+              <td>linux_aarch64_nodejs16</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=12475&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/prettier-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_nodejs14" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/prettier-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_nodejs16" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_aarch64_nodejs18</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=12475&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/prettier-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_nodejs18" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -80,13 +80,6 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=12475&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/prettier-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_nodejs18" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_nodejs14</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=12475&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/prettier-feedstock?branchName=main&jobName=win&configuration=win%20win_64_nodejs14" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -233,5 +226,6 @@ Feedstock Maintainers
 =====================
 
 * [@janjagusch](https://github.com/janjagusch/)
+* [@pavelzw](https://github.com/pavelzw/)
 * [@xhochy](https://github.com/xhochy/)
 
