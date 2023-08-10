@@ -10,7 +10,7 @@ source:
   sha256: 9bc464180a678514ca8d520e8611e4f43ac12e862e1e2b0772421ae219ccefe5
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -41,3 +41,4 @@ extra:
   recipe-maintainers:
     - janjagusch
     - xhochy
+    - pavelzw
