@@ -23,4 +23,4 @@ cat <<< $(jq 'del(.packageManager)' package.json) > package.json
 
 pnpm import
 pnpm install --prod
-pnpm licenses list --json | pnpm-licenses generate-disclaimer --json-input --output-file=ThirdPartyLicenses.txt
+pnpm licenses list --json --prod | pnpm-licenses generate-disclaimer --json-input --output-file=ThirdPartyLicenses.txt
