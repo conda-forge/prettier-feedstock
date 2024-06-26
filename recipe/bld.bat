@@ -14,6 +14,9 @@ for %%c in (prettier) do (
 )
 popd
 
+@rem remove '"packageManager": "yarn@<version>"' from package.json
+cmd /c "jq 'del(.packageManager)' package.json > package.json"
+
 @rem port yarn.lock to pnpm-lock.yaml
 cmd /c "pnpm import"
 if errorlevel 1 exit 1
