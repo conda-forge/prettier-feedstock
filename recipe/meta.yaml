@@ -16,6 +16,7 @@ requirements:
   build:
     - {{ stdlib("c") }}
     - nodejs  # [not win]
+    - m2w64-jq   # [win]
   host:
     - nodejs
     - pnpm
