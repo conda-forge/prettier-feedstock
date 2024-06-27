@@ -18,6 +18,9 @@ NPM_CONFIG_USERCONFIG=/tmp/nonexistentrc
 # all things coming after this are just concerned with generating the ThirdPartyLicenses.txt file
 npm install -g ${PKG_NAME}@${PKG_VERSION}
 
+# Let us use pnpm for licenses
+cat <<< $(jq 'del(.packageManager)' package.json) > package.json
+
 pnpm import
 pnpm install --prod
-pnpm licenses list --json | pnpm-licenses generate-disclaimer --json-input --output-file=ThirdPartyLicenses.txt
+pnpm licenses list --json --prod | pnpm-licenses generate-disclaimer --json-input --output-file=ThirdPartyLicenses.txt
