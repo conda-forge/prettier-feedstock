@@ -1,5 +1,5 @@
 {% set name = "prettier" %}
-{% set version = "3.3.2" %}
+{% set version = "3.3.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/prettier/prettier/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 7dc7f4b1854df8ad914fb4b1e30b10bf7ceeb9bd4fc4be455392cfd0980d1a41
+  sha256: 096859cfb7e4585b632a11c36e53c130c41ea1846f0d6fb09fea0ca3cc3f1446
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
