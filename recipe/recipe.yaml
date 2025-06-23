@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: prettier
-  version: 3.5.3
+  version: "3.6.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,18 +10,17 @@ package:
 
 source:
   url: https://github.com/prettier/prettier/archive/refs/tags/${{ version }}.tar.gz
-  sha256: 8f1024abc4d797214e2c0e2a93a53f24c83729c973a0cf7d8d999cb1059daa70
+  sha256: 5239b33cbefdc76ab7c893a6f8c76036ce1e8a6716514589524546a3b4910503
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
     - ${{ stdlib("c") }}
     - if: not win
       then: nodejs
-    - if: win
-      then: m2w64-jq
+      else: m2w64-jq
   host:
     - nodejs
     - pnpm
@@ -33,11 +32,9 @@ tests:
   - script:
       - if: not win
         then: prettier --version | grep "${{ version }}"
-      - if: win
-        then: prettier --version | findstr "${{ version }}"
-      - if: win
-        then: where prettier
-
+        else:
+          - prettier --version | findstr "${{ version }}"
+          - where prettier
 about:
   license: MIT
   license_file:
