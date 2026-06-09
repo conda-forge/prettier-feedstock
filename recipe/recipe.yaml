@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: prettier
-  version: "3.8.3"
+  version: "3.8.4"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://github.com/prettier/prettier/archive/refs/tags/${{ version }}.tar.gz
-  sha256: bdedc9357a86691c7c8c95738ca05cc8d5dd7a25f2dff9c368a6bffa5926d1da
+  sha256: ef9ebf8f636539d9541205ed534f7f4a1aa104faacc2dc3943eb16c08aa1644e
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
