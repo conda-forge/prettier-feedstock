@@ -19,7 +19,9 @@ requirements:
   build:
     - ${{ stdlib("c") }}
     - if: not win
-      then: nodejs
+      then:
+        - nodejs
+        - jq
       else: m2w64-jq
   host:
     - nodejs
