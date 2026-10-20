@@ -1,11 +1,10 @@
 schema_version: 1
 
 context:
-  name: prettier
   version: "3.9.6"
 
 package:
-  name: ${{ name|lower }}
+  name: prettier
   version: ${{ version|replace("-", "_") }}
 
 source:
@@ -13,20 +12,17 @@ source:
   sha256: bf37f54b26897bb52955135539e4b3c1f169b635c025e0ca173cfe8424a14df2
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
     - ${{ stdlib("c") }}
     - if: not win
-      then:
-        - nodejs
-        - jq
-      else: m2w64-jq
-  host:
-    - nodejs
+      then: nodejs
     - pnpm
     - pnpm-licenses >=2.1.0
+  host:
+    - nodejs
   run:
     - nodejs
 

@@ -15,11 +15,12 @@ for %%c in (prettier) do (
 popd
 
 @rem remove '"packageManager": "yarn@<version>"' from package.json
-jq "del(.packageManager)" package.json > package.json.new
+cmd /c "npm pkg delete packageManager"
 if errorlevel 1 exit 1
 
-copy package.json.new package.json
-if errorlevel 1 exit 1
+@rem pnpm >=11 fails on dependencies with ignored build scripts. We only install
+@rem the dependencies to list their licenses, so their build scripts don't matter.
+set "pnpm_config_strict_dep_builds=false"
 
 @rem port yarn.lock to pnpm-lock.yaml
 cmd /c "pnpm import"

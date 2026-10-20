@@ -21,13 +21,16 @@ export NPM_CONFIG_GLOBALCONFIG=/tmp/nonexistent-globalrc
 # Explicitly disable the resolution minimum-release-age policy which triggers
 # ERR_PNPM_RESOLUTION_POLICY_VIOLATIONS_UNHANDLED on some pnpm versions.
 export npm_config_minimum_release_age=0
+# pnpm >=11 fails on dependencies with ignored build scripts. We only install
+# the dependencies to list their licenses, so their build scripts don't matter.
+export pnpm_config_strict_dep_builds=false
 
 # install prettier globally from the npm registry
 # all things coming after this are just concerned with generating the ThirdPartyLicenses.txt file
 npm install -g ${PKG_NAME}@${PKG_VERSION}
 
 # Let us use pnpm for licenses
-cat <<< $(jq 'del(.packageManager)' package.json) > package.json
+npm pkg delete packageManager
 
 pnpm import
 pnpm install --prod
