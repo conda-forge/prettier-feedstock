@@ -19,10 +19,10 @@ requirements:
     - ${{ stdlib("c") }}
     - if: not win
       then: nodejs
-  host:
-    - nodejs
     - pnpm
     - pnpm-licenses >=2.1.0
+  host:
+    - nodejs
   run:
     - nodejs
 
